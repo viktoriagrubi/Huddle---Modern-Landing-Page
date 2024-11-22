@@ -99,6 +99,10 @@ header {
   padding-bottom: 40px;
 }
 
+.feature:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
 .features-container {
   position: relative;
   max-width: 1200px;
@@ -133,6 +137,9 @@ header {
   align-items: center;
   z-index: 2;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -110px;
 }
 
 .cta-container {
@@ -280,4 +287,23 @@ footer {
   color: #ccc;
   text-align: right;
   margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .feature {
+    flex-direction: column;
+  }
+
+  .feature:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .cta-section {
+    width: 70%;
+    height: 20%;
+  }
 }
